@@ -1,4 +1,4 @@
-function NumPad({ addEle, handleEquals, setIP, setAnswer }) {
+function NumPad({ addEle, handleEquals, setIP, setAnswer, ip }) {
   return (
     <div
       className="numpad"
@@ -31,7 +31,17 @@ function NumPad({ addEle, handleEquals, setIP, setAnswer }) {
       <button>*</button>
       <button>C</button>
       <button>0</button>
-      <button onClick={handleEquals}>=</button>
+      <button
+        onClick={() => {
+          if (ip === "") {
+            setAnswer("Error");
+            return;
+          }
+          handleEquals();
+        }}
+      >
+        =
+      </button>
       <button>/</button>
     </div>
   );

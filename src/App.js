@@ -3,7 +3,7 @@ import "./App.css";
 import NumPad from "./NumPad";
 function App() {
   let [ip, setIP] = useState("");
-  let [answer, setAnswer] = useState(0);
+  let [answer, setAnswer] = useState("");
   function addEle(value) {
     setIP((v) => v + value);
   }
@@ -22,6 +22,7 @@ function App() {
         handleEquals={handleEquals}
         setIP={setIP}
         setAnswer={setAnswer}
+        ip={ip}
       />
     </div>
   );
