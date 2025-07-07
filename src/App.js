@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="fullApp">
       <h1>React Calculator</h1>
-      <input value={ip} onChange={(e) => setIP(e.target.value)} />
+      <input type="text" value={ip} onChange={(e) => setIP(e.target.value)} />
       <div>{answer}</div>
       <NumPad
         addEle={addEle}
